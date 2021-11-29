@@ -11,7 +11,7 @@ Cypress.Commands.add('addEntries', entries => {
     const newTodo = cy.get('.new-todo')
     entries.forEach( entry => {
       newTodo.type(entry)
-      .type('{enter}')
+      .type('{enter}');
     });
 });
 
@@ -69,7 +69,7 @@ describe('On initialization it ', () => {
     const entries = ['Foo', 'Bar', 'Baz'];
     cy.addEntries(entries).then(() => {
       const $els = cy.get('.view > label');
-      $els.should('exist')
+      $els.should('exist');
       $els.should('have.length', entries.length);
       $els.each(($el, i) => {
         expect($el.parent().parent()[0].nodeName).to.eq('LI');
@@ -83,7 +83,7 @@ describe('On initialization it ', () => {
     const entries = [' spaces ', 'rightspace ', ' leftspace'];
     cy.addEntries(entries).then(() => {
       const $els = cy.get('.view > label');
-      $els.should('exist')
+      $els.should('exist');
       $els.should('have.length', entries.length);
       $els.each(($el, i) => {
         expect($el[0].outerText).to.eq(entries[i].trim());
