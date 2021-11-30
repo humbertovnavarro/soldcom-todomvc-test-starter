@@ -7,4 +7,7 @@ describe('SOLD.com Test Project: persistent', () => {
   beforeEach(() => {
     cy.visit('/');
   });
+  it('Todos persist page refreshes', () => {
+
+  })
 });

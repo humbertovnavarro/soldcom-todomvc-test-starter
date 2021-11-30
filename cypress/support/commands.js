@@ -24,6 +24,9 @@
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
 Cypress.Commands.add('addEntries', entries => {
+    if(entries === undefined) {
+        entries = ['Foo', 'Bar', 'Baz']
+    }
     const newTodo = cy.get('.new-todo')
     entries.forEach( entry => {
       newTodo.type(entry)
