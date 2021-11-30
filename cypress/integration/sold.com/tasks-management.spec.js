@@ -76,7 +76,7 @@ describe('SOLD.com Test Project: task management', () => {
     });
   });
 
-  it('Hides other controls when editing', () => {
+  it('Highlights currently applied filter', () => {
     cy.addEntries(['Foo']).then(() => {
       const $label = cy.get('.todo-list li');
       $label.dblclick().then(() => {

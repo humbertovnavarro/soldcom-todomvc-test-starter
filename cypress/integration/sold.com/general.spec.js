@@ -39,8 +39,7 @@ describe('On initialization it ', () => {
   // Add todo, should clear text input field when an item is added, assert field is blank
   it('Clears text input field when an item is added.', () => {
     cy.get('.new-todo')
-    .type('Hello World!')
-    .type('{enter}')
+    .type('Hello World! {enter}')
     .should('have.value', '');
   });
 
@@ -60,7 +59,7 @@ describe('On initialization it ', () => {
     const value = 'Foo'
     cy.addEntries([value])
     .then(() => {
-      cy.contains(value).should('exist');
+      cy.get('.todo-list').contains(value).should('exist');
     });
   });
 
