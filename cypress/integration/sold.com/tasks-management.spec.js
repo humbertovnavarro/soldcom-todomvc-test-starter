@@ -8,7 +8,6 @@
 //   command defined in /integration/sold.com/support/commands.js
 // ----------------------------------------------------------------------------
 
-
 describe('SOLD.com Test Project: task management', () => {
   beforeEach(() => {
     cy.visit('/');
