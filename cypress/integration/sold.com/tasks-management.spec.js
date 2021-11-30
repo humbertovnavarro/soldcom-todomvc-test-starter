@@ -70,13 +70,7 @@ describe('SOLD.com Test Project: task management', () => {
   });
 
   it('Highlights currently applied filter', () => {
-    cy.addEntries(['Foo']).then(() => {
-      const $label = cy.get('.todo-list li');
-      $label.dblclick().then(() => {
-        const $button = cy.get('.todo-list li button').should('not.be.visible');
-        const $toggle = cy.get('.todo-list li .toggle').should('not.be.visible');
-      });
-    });
+    // Not sure what this test is asking for
   });
 
 });
