@@ -7,13 +7,6 @@
 // Custom Commands:
 //   command defined in /integration/sold.com/support/commands.js
 // ----------------------------------------------------------------------------
-Cypress.Commands.add('addEntries', entries => {
-    const newTodo = cy.get('.new-todo')
-    entries.forEach( entry => {
-      newTodo.type(entry)
-      .type('{enter}');
-    });
-});
 
 describe('On initialization it ', () => {
   beforeEach(() => {
